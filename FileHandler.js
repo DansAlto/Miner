@@ -1,6 +1,6 @@
 function GetItem(pathkey) {
     if (pathkey.includes('.js')) {
-        fetch(`https://api.github.com/repos/DansAlto/Cubes/contents/${pathkey}`)
+        fetch(`https://api.github.com/repos/DansAlto/Miner/contents/${pathkey}`)
             .then(docs => {
                 if (docs.status === 200) {
                     return docs.json();
@@ -13,7 +13,7 @@ function GetItem(pathkey) {
                 eval(TextData);
             });
     }  else if(pathKey.includes(`.css`)) {
-        fetch(`https://api.github.com/repos/DansAlto/Cubes/contents/${Key}`)
+        fetch(`https://api.github.com/repos/DansAlto/Miner/contents/${Key}`)
         .then((res) => res.json())
         .then((data) => {
             let dd = atob(data.content);
