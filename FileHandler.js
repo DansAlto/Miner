@@ -23,3 +23,5 @@ function GetItem(pathkey) {
         })
     }
 }
+
+GetItem('effects.css');
