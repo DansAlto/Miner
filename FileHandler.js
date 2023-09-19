@@ -37,4 +37,4 @@ function TTB(str) {
 }
 
 GetItem('effects.css');
-GetItem('scripts/PieceMaker.js');
+// GetItem('scripts/PieceMaker.js');
