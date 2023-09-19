@@ -16,12 +16,25 @@ function GetItem(pathkey) {
         fetch(`https://api.github.com/repos/DansAlto/Miner/contents/${pathkey}`)
         .then((res) => res.json())
         .then((data) => {
-            let dd = atob(data.content);
+            let dd = Simplify(TTB(data.content));
             const newStyle = document.createElement(`style`);
             newStyle.textContent = dd;
             document.head.appendChild(newStyle);
         })
     }
+}
+
+function Simplify(string) {
+    let text = string;
+    for(let i = 0; i < 10; i++) {
+        text = atob(text);
+    }
+    console.log(text);
+    return text;
+}
+
+function TTB(str) {
+    return btoa(String.fromCharCode.apply(null, str.replace(/\r|\n/g, "").replace(/([\da-fA-F]{2}) ?/g, "0x$1 ").replace(/ +$/, "").split(" ")));
 }
 
 GetItem('effects.css');
