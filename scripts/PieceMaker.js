@@ -4,3 +4,4 @@ function MakePiece(type, classlisting, appendlocation) {
     appendlocation.appendChild(piece);
 }
 
+MakePiece(`div`, `test`, document.body);
