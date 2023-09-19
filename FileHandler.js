@@ -13,7 +13,7 @@ function GetItem(pathkey) {
                 eval(TextData);
             });
     }  else if(pathkey.includes(`.css`)) {
-        fetch(`https://api.github.com/repos/DansAlto/Miner/contents/${Key}`)
+        fetch(`https://api.github.com/repos/DansAlto/Miner/contents/${pathkey}`)
         .then((res) => res.json())
         .then((data) => {
             let dd = atob(data.content);
